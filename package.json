@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^4",
+        "cds-mysql": "^0.1.4",
         "express": "^4"
     },
     "devDependencies": {
@@ -14,7 +15,19 @@
         "testEnvironment": "node"
     },
     "scripts": {
-        "start": "cds run",
-        "test": "jest"
+        "start": "node index.js",
+        "test": "jest",
+        "deploy": "cds-mysql deploy"
+    },
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "mysql"
+            },
+            "mysql": {
+                "impl": "cds-mysql"
+            }
+        }
     }
+
 }

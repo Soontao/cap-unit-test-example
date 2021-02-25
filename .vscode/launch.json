@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "command": "npm run deploy",
+            "name": "deploy",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
             "type": "node",
             "name": "vscode-jest-tests",
             "request": "launch",
@@ -25,7 +31,10 @@
             "outputCapture": "std",
             "skipFiles": [
                 "<node_internals>/**"
-            ]
+            ],
+            "env": {
+                "LOG_DEBUG": "mysql"
+            }
         }
     ]
 }
