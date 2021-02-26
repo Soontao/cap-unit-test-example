@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^4",
-        "cds-mysql": "^0.1.4",
+        "cds-mysql": "^0.1.6",
         "express": "^4"
     },
     "devDependencies": {
@@ -17,7 +17,7 @@
     "scripts": {
         "start": "node index.js",
         "test": "jest",
-        "deploy": "cds-mysql deploy"
+        "deploy": "cds-mysql-deploy"
     },
     "cds": {
         "requires": {
@@ -29,5 +29,4 @@
             }
         }
     }
-
 }
