@@ -25,7 +25,10 @@
                 "kind": "mysql"
             },
             "mysql": {
-                "impl": "cds-mysql"
+                "impl": "cds-mysql",
+                "pool": {
+                    "max": 15
+                }
             }
         }
     }
