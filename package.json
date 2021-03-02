@@ -1,20 +1,31 @@
 {
-    "name": "ut-example",
-    "version": "1.0.0",
-    "private": true,
-    "dependencies": {
-        "@sap/cds": "^4",
-        "express": "^4"
+  "name": "ut-example",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^4",
+    "express": "^4",
+    "@sap/hana-client": "^2.7.23"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "sqlite3": "^5"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "start": "cds run",
+    "test": "jest"
+  },
+  "cds": {
+    "hana": {
+      "deploy-format": "hdbtable"
     },
-    "devDependencies": {
-        "jest": "^26.6.3",
-        "sqlite3": "^5"
-    },
-    "jest": {
-        "testEnvironment": "node"
-    },
-    "scripts": {
-        "start": "cds run",
-        "test": "jest"
+    "requires": {
+      "db": {
+        "kind": "sql"
+      }
     }
+  }
 }
