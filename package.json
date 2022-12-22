@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^4",
+    "@sap/cds": "^6",
     "express": "^4",
     "@sap/hana-client": "^2.7.23"
   },
